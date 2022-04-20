@@ -28,7 +28,7 @@ func find(arr []int, dst int) int {
 	//在循环中保证循环的不变量
 	var left, right = 0, len(arr) - 1 // [left, right] 区间内，查找目标元素
 	for left <= right {
-		var mid = (left + right) / 2
+		var mid = left + (right-left)/2 // (l+r)/2 会溢出
 		if arr[mid] == dst {
 			return mid
 		} else if arr[mid] > dst {
