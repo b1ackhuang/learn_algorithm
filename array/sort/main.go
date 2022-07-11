@@ -20,7 +20,8 @@ func main() {
 	//var dst selectSort(src)
 	//var dst = insertSort(src)
 	//math.Min(float64())
-	var dst = mergeSort(src)
+	//var dst = mergeSort(src)
+	var dst = HeapSort(src)
 	fmt.Println(dst)
 }
 
